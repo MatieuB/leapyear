@@ -2,7 +2,18 @@ var code = require('../main');
 var expect = require('chai').expect;
 
 describe("Leap Year", function (){
-  it('will check if leapyear by checking remainders of leapyear criteria', function (){
-    expect(code.leapYear()).to.equal(true)
-  })
+  expect(code.leapYear(2016)).to.equal(true);
+  });
+  it('returns true for 2016', function (){
+    expect(code.leapYear(2016)).to.equal(true);
+  });
+  it('returns true for 2015', function (){
+    expect(code.leapYear(2015)).to.equal(false);
+  });
+  it('returns true for 1600', function (){
+    expect(code.leapYear(1600)).to.equal(true);
+  });
+  it('returns false for 1700',function (){
+    expect(code.leapYear(1700)).to.equal(false)
+
 });
